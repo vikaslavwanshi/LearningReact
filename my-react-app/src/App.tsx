@@ -1,20 +1,24 @@
-import { ReactComponent as Logo } from "./logo.svg";
-import Posts from "./Components/Posts";
+import React from 'react';
+import { Brand, Cta, Navbar } from './Components';
+import { Blog,Header,Footer,Features,Possibility,Whatgpt3 } from './Containers';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      <Logo style={{ height: 200 }} />
-        <h1> Smiles me Custom Printing
-        </h1>
-        <body> Print your ideas!!
-        </body>
-      </header>
-      <Posts />
+    <div className='App'>
+      <div className='gradient__bg'>
+        <Navbar />
+        <Header />
+      </div>
+        <Brand />
+        <Whatgpt3 />
+        <Features />
+        <Possibility />
+        <Cta />
+        <Blog />
+        <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
